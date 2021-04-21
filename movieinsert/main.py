@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.secret_key = 'sqlproject'
 
 # Enter your database connection details below
-app.config['MYSQL_HOST'] = '13.233.93.172'
+app.config['MYSQL_HOST'] = '15.206.117.133'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'mysql'
 app.config['MYSQL_DB'] = 'threatre'
@@ -37,6 +37,7 @@ def insertmovie():
         cursor.execute('SELECT * FROM movies WHERE movie_id = %s AND movie_name = %s', (movie_id, movie_name,))
         # Fetch one record and return result
         movies  = cursor.fetchone()
+        
         if movies:
             msg = 'movie already exists!'
         elif not movie_id or not movie_name:
@@ -56,4 +57,27 @@ def insertmovie():
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
-    return render_template('1.html')
+    
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute('select * from movies')
+    data = cursor.fetchall()
+    return render_template('1.html',data=data)
+
+'''
+@app.route('/', methods=['GET', 'POST'])
+def abc():
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute('select * from movies')
+    data = cursor.fetchall()
+    for row in data:
+        movie_name = row['movie_id']
+        duration = row['duration']
+        movie_type = row['movie_type']
+        print('===============================================')
+        print('movie name', movie_name)
+        print('duration :', duration)
+        print('movie type   :', movie_type)
+        print('===============================================')
+
+    return "hello"
+'''
