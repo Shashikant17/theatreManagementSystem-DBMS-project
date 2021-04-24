@@ -263,7 +263,7 @@
 
 
 
-<body class="home page-template-default page page-id-73 theme-amy-movie woocommerce-no-js amy-header-default  single-author wpb-js-composer js-comp-ver-6.1 vc_responsive">
+<body class="home page-template-default page page-id-73 theme-amy-movie woocommerce-no-js amy-header-default  single-author wpb-js-composer js-comp-ver-6.1 vc_responsive" style="background-color:#CAFAFE;">
 	<div id="page" class="hfeed site">
 
 		<header id="masthead" class="site-header header-default has-search light">
@@ -374,7 +374,7 @@
 													system, and expound the actual From what ...</p>
 											</div>
 											<div class="slide-button"><a
-													href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-girl-on-the-train/"><i
+													href="{{ url_for('details') }}"><i
 														aria-hidden="true" class="fa fa-exclamation"></i>Detail</a>
 											</div>
 										</div>
@@ -397,7 +397,7 @@
 													system, and expound the actual From what ...</p>
 											</div>
 											<div class="slide-button"><a
-													href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-magnificent-seven/"><i
+													href="{{ url_for('details') }}"><i
 														aria-hidden="true" class="fa fa-exclamation"></i>Detail</a>
 											</div>
 										</div>
@@ -420,7 +420,7 @@
 													system, and expound the actual From what ...</p>
 											</div>
 											<div class="slide-button"><a
-													href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+													href="{{ url_for('details') }}"><i
 														aria-hidden="true" class="fa fa-exclamation"></i>Detail</a>
 											</div>
 										</div>
@@ -452,7 +452,7 @@
 													<div class="col-md-15 grid-item">
 														<article class="entry-item" onclick="">
 															<div class="entry-thumb"><img width="360" height="618"
-																	src="{{ data[0]['url'] }}"
+																	src="{{ data[0]['url'] }}"	
 																	class="attachment-360x618 size-360x618" alt=""
 																	srcset="{{ data[0]['url'] }} 360w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_6-175x300.jpg 175w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_6-264x454.jpg 264w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_6-174x300.jpg 174w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_6-258x444.jpg 258w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_6-214x368.jpg 214w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_6-196x336.jpg 196w"
 																	sizes="(max-width: 360px) 100vw, 360px" />
@@ -460,34 +460,27 @@
 																<span class="rate">4.3</span>
 															</div>
 															<div class="entry-content">
-																<h4 class="entry-title">Tenet</h4>
+																<h4 class="entry-title">{{ data[0]['movie_name'] }}</h4>
 																
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
 															</div>
 															<div class="pic-caption open-left">
 																<h4 class="entry-title"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/">Norma
-																		- Royal Opera</a></h4><span class="pg">G</span>
+																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/">{{ data[0]['movie_name'] }}</a></h4><span class="pg">{{ data[0]['movie_type'] }}</span>
 																<div class="desc-mv">
-																	<p><span>Release: </span>July 18, 2017</p>
-																	<p><span>Genre: </span><a
-																			href="http://demo.amytheme.com/movie/demo/single-cinema/amy_genre/cartoon/">Cartoon</a>,
-																		<a
-																			href="http://demo.amytheme.com/movie/demo/single-cinema/amy_genre/drama/">Drama</a>,
-																		<a
-																			href="http://demo.amytheme.com/movie/demo/single-cinema/amy_genre/magic/">Magic</a>,
-																		<a
-																			href="http://demo.amytheme.com/movie/demo/single-cinema/amy_genre/sci-fi/">Sci-fi</a>
+																	
+																	<p><span>Genre: </span>
+																		{{ data[0]['genre'] }}
 																	</p>
-																	<p><span>Duration: </span>02 hours 00 minutes</p>
-																	<p><span>Language: </span>English </p>
+																	<p><span>Duration: </span>{{ data[0]['duration'] }}</p>
+																	
 																</div><span class="rate">4.3</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -501,35 +494,32 @@
 																	class="attachment-360x618 size-360x618" alt=""
 																	srcset="{{ data[1]['url'] }} 360w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_3-175x300.jpg 175w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_3-264x454.jpg 264w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_3-174x300.jpg 174w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_3-258x444.jpg 258w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_3-214x368.jpg 214w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_3-196x336.jpg 196w"
 																	sizes="(max-width: 360px) 100vw, 360px" />
-																<div class="right-info"><span class="pg">G</span></div>
+																<div class="right-info"><span class="pg">{{ data[1]['movie_type'] }}</span></div>
 																<span class="rate">4.4</span>
 															</div>
 															<div class="entry-content">
-																<h4 class="entry-title">Ice Age: Collision Course</h4>
-																<div class="entry-date">Release: July 7, 2017</div>
+																<h4 class="entry-title">{{ data[1]['movie_name'] }}</h4>
+																
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
 															</div>
 															<div class="pic-caption open-left">
 																<h4 class="entry-title"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/">Ice
-																		Age: Collision Course</a></h4><span
-																	class="pg">G</span>
+																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/">{{ data[1]['movie_name'] }}</a></h4><span
+																	class="pg">{{ data[1]['movie_type'] }}</span>
 																<div class="desc-mv">
-																	<p><span>Release: </span>July 7, 2017</p>
-																	<p><span>Genre: </span><a
-																			href="http://demo.amytheme.com/movie/demo/single-cinema/amy_genre/magic/">Magic</a>,
-																		<a
-																			href="http://demo.amytheme.com/movie/demo/single-cinema/amy_genre/sci-fi/">Sci-fi</a>
+																	
+																	<p><span>Genre: </span>
+																		{{ data[1]['genre'] }}
 																	</p>
-																	<p><span>Duration: </span>02 hours 10 minutes</p>
-																	<p><span>Language: </span>English </p>
+																	<p><span>Duration: </span>{{ data[1]['duration'] }}</p>
+																	
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -550,7 +540,7 @@
 																<h4 class="entry-title">Bad Moms</h4>
 																<div class="entry-date">Release: July 15, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -572,7 +562,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -594,7 +584,7 @@
 																</h4>
 																<div class="entry-date">Release: July 28, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -619,7 +609,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -640,7 +630,7 @@
 																<h4 class="entry-title">Don't Breathe</h4>
 																<div class="entry-date">Release: July 20, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -660,7 +650,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -705,7 +695,7 @@
 																<h4 class="entry-title">Norma - Royal Opera</h4>
 																<div class="entry-date">Release: July 18, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -729,7 +719,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.3</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -750,7 +740,7 @@
 																<h4 class="entry-title">Ice Age: Collision Course</h4>
 																<div class="entry-date">Release: July 7, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -771,7 +761,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -792,7 +782,7 @@
 																<h4 class="entry-title">Bad Moms</h4>
 																<div class="entry-date">Release: July 15, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -814,7 +804,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -836,7 +826,7 @@
 																</h4>
 																<div class="entry-date">Release: July 28, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -861,7 +851,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -882,7 +872,7 @@
 																<h4 class="entry-title">Don't Breathe</h4>
 																<div class="entry-date">Release: July 20, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -902,7 +892,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -947,7 +937,7 @@
 																<h4 class="entry-title">Norma - Royal Opera</h4>
 																<div class="entry-date">Release: July 18, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -971,7 +961,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.3</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -992,7 +982,7 @@
 																<h4 class="entry-title">Ice Age: Collision Course</h4>
 																<div class="entry-date">Release: July 7, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1013,7 +1003,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1034,7 +1024,7 @@
 																<h4 class="entry-title">Bad Moms</h4>
 																<div class="entry-date">Release: July 15, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1056,7 +1046,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1078,7 +1068,7 @@
 																</h4>
 																<div class="entry-date">Release: July 28, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1103,7 +1093,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1124,7 +1114,7 @@
 																<h4 class="entry-title">Don't Breathe</h4>
 																<div class="entry-date">Release: July 20, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1144,7 +1134,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1189,7 +1179,7 @@
 																<h4 class="entry-title">Norma - Royal Opera</h4>
 																<div class="entry-date">Release: July 18, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1213,7 +1203,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.3</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1234,7 +1224,7 @@
 																<h4 class="entry-title">Ice Age: Collision Course</h4>
 																<div class="entry-date">Release: July 7, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1255,7 +1245,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1276,7 +1266,7 @@
 																<h4 class="entry-title">Bad Moms</h4>
 																<div class="entry-date">Release: July 15, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1298,7 +1288,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1320,7 +1310,7 @@
 																</h4>
 																<div class="entry-date">Release: July 28, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1345,7 +1335,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1366,7 +1356,7 @@
 																<h4 class="entry-title">Don't Breathe</h4>
 																<div class="entry-date">Release: July 20, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1386,7 +1376,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1431,7 +1421,7 @@
 																<h4 class="entry-title">Norma - Royal Opera</h4>
 																<div class="entry-date">Release: July 18, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1455,7 +1445,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.3</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1476,7 +1466,7 @@
 																<h4 class="entry-title">Ice Age: Collision Course</h4>
 																<div class="entry-date">Release: July 7, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1497,7 +1487,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1518,7 +1508,7 @@
 																<h4 class="entry-title">Bad Moms</h4>
 																<div class="entry-date">Release: July 15, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1540,7 +1530,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1562,7 +1552,7 @@
 																</h4>
 																<div class="entry-date">Release: July 28, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1587,7 +1577,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1608,7 +1598,7 @@
 																<h4 class="entry-title">Don't Breathe</h4>
 																<div class="entry-date">Release: July 20, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1628,7 +1618,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1673,7 +1663,7 @@
 																<h4 class="entry-title">Norma - Royal Opera</h4>
 																<div class="entry-date">Release: July 18, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1697,7 +1687,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.3</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/norma-royal-opera/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1718,7 +1708,7 @@
 																<h4 class="entry-title">Ice Age: Collision Course</h4>
 																<div class="entry-date">Release: July 7, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1739,7 +1729,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/ice-age-collision-course/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1760,7 +1750,7 @@
 																<h4 class="entry-title">Bad Moms</h4>
 																<div class="entry-date">Release: July 15, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1782,7 +1772,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/bad-moms/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1804,7 +1794,7 @@
 																</h4>
 																<div class="entry-date">Release: July 28, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1829,7 +1819,7 @@
 																	<p><span>Language: </span>English </p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-sleeping-beauty-australia/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1850,7 +1840,7 @@
 																<h4 class="entry-title">Don't Breathe</h4>
 																<div class="entry-date">Release: July 20, 2017</div>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1870,7 +1860,7 @@
 																	<p><span>Language: </span>English</p>
 																</div><span class="rate">4.4</span>
 																<div class="entry-button"><a
-																		href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/dont-breathe/"><i
+																		href="{{ url_for('details') }}"><i
 																			aria-hidden="true"
 																			class="fa fa-exclamation"></i>Detail</a>
 																</div>
@@ -1906,28 +1896,10 @@
 					<div class="row">
 						<div class="col-md-3 col-xs-12">
 							<div class="amy-widget amy-widget-module">
-								<div class="amy-widget amy-widget-module about ">
-									<div class="footer-logo"><a
-											href="http://demo.amytheme.com/movie/demo/single-cinema/"><img width="155"
-												height="51"
-												src="http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_65.png"
-												class="attachment-full size-full" alt="" /></a></div>
-									<div class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-										veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat</div>
-								</div>
+								
 								<div class="clear"></div>
 							</div>
-							<div class="amy-widget amy-widget-module">
-								<div class="amy-widget amy-widget-module social ">
-									<ul class="amy-social-list">
-										<li><a href="#" class="fa fa-facebook"></a></li>
-										<li><a href="#" class="fa fa-twitter"></a></li>
-									</ul>
-								</div>
-								<div class="clear"></div>
-							</div>
+							
 						</div>
 						<div class="col-md-3 col-xs-12">
 							<div class="amy-widget widget_nav_menu">
@@ -1938,23 +1910,21 @@
 									<ul id="menu-footer-menu" class="menu">
 										<li id="menu-item-239"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-75 current_page_item menu-item-239">
-											<a href="http://demo.amytheme.com/movie/demo/single-cinema/"
-												aria-current="page">Home</a></li>
-										<li id="menu-item-237"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237">
-											<a
-												href="http://demo.amytheme.com/movie/demo/single-cinema/contact/">Contact</a>
+											<a href="/dashboard"
+												aria-current="page">Home</a>
 										</li>
+										
 										<li id="menu-item-238"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238">
-											<a href="http://demo.amytheme.com/movie/demo/single-cinema/top-rated/">Now
-												Playing</a></li>
+											<a href="/dashboard#BookTicket">Now
+												Playing</a>
+										</li>
 									</ul>
 								</div>
 								<div class="clear"></div>
 							</div>
 						</div>
-
+	
 						<div class="col-md-3 col-xs-12">
 							<div class="amy-widget amy-widget-module">
 								<div class="amy-widget amy-widget-module contact ">
@@ -1989,36 +1959,8 @@
 					</div>
 				</div>
 			</div>
-	       </div>
-     	</footer>
-	<div id="amy-copyright" class="amy-copyright">
-		<div class="container">
-			<div class="amy-inner">
-				<div class="amy-copyright-left pull-left">
-					<div class="amy-copyright-module amy-module-text " style="">
-
-						©copyright 2016 Movie
-					</div>
-				</div>
-				<div class="amy-copyright-right pull-right">
-					<div class="amy-copyright-module amy-module-menu " style="">
-						<div class="amy-menu">
-							<ul class="menu">
-								<li class="menu-item"><a
-										href="http://demo.amytheme.com/movie/demo/single-cinema/">Home</a></li>
-								<li class="menu-item"><a
-										href="http://demo.amytheme.com/movie/demo/single-cinema/contact/">Contact</a>
-								</li>
-								<li class="menu-item"><a
-										href="http://demo.amytheme.com/movie/demo/single-cinema/top-rated/">Now
-										Playing</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
 			</div>
-		</div>
-	</div>
+		</footer>
 	</div>
 
 	<script>(function () {

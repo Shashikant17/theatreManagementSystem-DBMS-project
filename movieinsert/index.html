@@ -30,11 +30,11 @@
 				<input type="text" name="movie_type" placeholder="Movie type" id="movie_type" required>
                 <br>
 
-                <label for="description">
-					Description:
-				</label><br>
-                <textarea rows = "5" cols = "50" name = "description" >Enter description here...
-                </textarea>
+                <label for="genre">
+					Genre:
+				</label>
+				<input type="text" name="genre" placeholder="Genre" id="genre" required>
+
                 <br>
                 <label for="hall_id">
 					Hall ID:
@@ -46,6 +46,13 @@
 				</label>
 				<input type="text" name="show_time" placeholder="Show Time" id="show_time" >
 				<br>
+
+				<label for="url">
+					Movie URL:
+				</label>
+				<input type="text" name="url" placeholder="Enter URL" id="url" >
+				<br>
+
 				<div class="msg">{{ msg }}</div>
 				<input type="submit" value="Insert Movie">
 			</form>

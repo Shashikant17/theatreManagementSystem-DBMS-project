@@ -8,7 +8,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="http://demo.amytheme.com/movie/demo/single-cinema/xmlrpc.php" />
 	<link rel="stylesheet" href="D:\p1\css\style.css" />
-
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 	<title>The Girl On The Train</title>
 	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -50,7 +50,74 @@
 			background: none !important;
 			padding: 0 !important;
 		}
-	</style>
+	</style><!--
+	<script type="text/javascript">
+            $('.my_button').click(function () {
+                var t = "09:15:00"
+                
+                $.ajax({
+                    type: "POST",
+                    url: "/test",
+                    contentType: "application/json",
+                    data: t,
+                    dataType: "Text",
+                   
+                });
+
+            })
+		
+	</script>-->
+	<script>   
+		function t1() {   
+		var time="09:15:00"
+		var xhr = new XMLHttpRequest();
+		var url = "http://localhost:5000/moviebooking/" + time;  
+		xhr.open('GET', url, false);
+		xhr.send();
+		var retrievedtext = xhr.responseText;
+		}   
+	</script>
+	<script>   
+		function t2() {   
+		var time="12:15:00"
+		var xhr = new XMLHttpRequest();
+		var url = "http://localhost:5000/moviebooking/" + time;  
+		xhr.open('GET', url, false);
+		xhr.send();
+		var retrievedtext = xhr.responseText;
+		}   
+	</script>
+	<script>   
+		function t3() {   
+		var time="03:15:00"
+		var xhr = new XMLHttpRequest();
+		var url = "http://localhost:5000/moviebooking/" + time;  
+		xhr.open('GET', url, false);
+		xhr.send();
+		var retrievedtext = xhr.responseText;
+		}   
+	</script>
+	<script>   
+		function t4() {   
+		var time="06:15:00"
+		var xhr = new XMLHttpRequest();
+		var url = "http://localhost:5000/moviebooking/" + time;  
+		xhr.open('GET', url, false);
+		xhr.send();
+		var retrievedtext = xhr.responseText;
+		}   
+	</script>
+	<script>   
+		function t5() {   
+		var time="09:15:00"
+		var xhr = new XMLHttpRequest();
+		var url = "http://localhost:5000/moviebooking/" + time;  
+		xhr.open('GET', url, false);
+		xhr.send();
+		var retrievedtext = xhr.responseText;
+		}   
+	</script>
+	
 	<link rel='stylesheet' id='wp-block-library-css'
 		href='http://demo.amytheme.com/movie/demo/single-cinema/wp-includes/css/dist/block-library/style.min.css?ver=5.3.6'
 		type='text/css' media='all' />
@@ -69,6 +136,7 @@
 	<style id='rs-plugin-settings-inline-css' type='text/css'>
 		#rs-demo-id {}
 	</style>
+	
 	<link rel='stylesheet' id='google-font-roboto-condensed-css'
 		href='https://fonts.googleapis.com/css?family=Roboto+Condensed&#038;ver=1.0.0' type='text/css' media='all' />
 	<link rel='stylesheet' id='amy-movie-google-fonts-css'
@@ -195,7 +263,7 @@
 </head>
 
 <body
-	class="amy_movie-template-default single single-amy_movie postid-102 amy-header-default  single-author wpb-js-composer js-comp-ver-6.1 vc_responsive">
+	class="amy_movie-template-default single single-amy_movie postid-102 amy-header-default  single-author wpb-js-composer js-comp-ver-6.1 vc_responsive" style="background-color:#CAFAFE;">
 	<div id="page" class="hfeed site">
 
 
@@ -207,77 +275,70 @@
 						<div id="amy-site-logo">
 							<a href="http://demo.amytheme.com/movie/demo/book-ticket/">
 								<img class="amy-logo amy-logo1x"
-									src="http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2016/12/img_66.png"
+									src="https://uditagarwals3.s3.ap-south-1.amazonaws.com/logo.png" height= "200" width="200"
 									alt="AmyMovie" /></a>
 						</div>
-					</div>
-					<div class="amy-right">
-						<nav id="amy-site-nav" class="amy-site-navigation amy-primary-navigation">
-							<div class="menu-mainnav-container">
-								<ul id="menu-mainnav" class="nav-menu">
-									<li id="menu-item-74"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-73 current_page_item menu-item-has-children menu-item-74">
-										<a href="{{ url_for('dashboard') }}" aria-current="page">Dashboard</a>
+						</div>
+						<div class="amy-right">
+							<nav id="amy-site-nav" class="amy-site-navigation amy-primary-navigation">
+								<div class="menu-mainnav-container">
+									<ul id="menu-mainnav" class="nav-menu">
+										<li id="menu-item-74"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-73 current_page_item menu-item-has-children menu-item-74">
+											<a href="{{ url_for('dashboard') }}" aria-current="page">Dashboard</a>
 
-									</li>
-									<li id="menu-item-121"
-										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-121">
-										<a href="#">Genre</a>
-										<ul class="sub-menu">
-											<li id="menu-item-123"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
-												<a
-													href="http://demo.amytheme.com/movie/demo/book-ticket/movie-list-sidebar/">Action</a>
-											</li>
-											<li id="menu-item-123"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
-												<a
-													href="http://demo.amytheme.com/movie/demo/book-ticket/movie-list-sidebar/">Comedy</a>
-											</li>
-											<li id="menu-item-327"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327">
-												<a
-													href="http://demo.amytheme.com/movie/demo/book-ticket/v2-movie-list/">Drama</a>
-											</li>
-											<li id="menu-item-123"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
-												<a
-													href="http://demo.amytheme.com/movie/demo/book-ticket/movie-list-sidebar/">Horror</a>
-											</li>
-											<li id="menu-item-325"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-325">
-												<a
-													href="http://demo.amytheme.com/movie/demo/book-ticket/v2-movie-carousel/">Romance</a>
-											</li>
-										</ul>
-									</li>
-									<li id="menu-item-128"
-										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-128">
-										<a href="#">About</a>
-									</li>
-									<li id="menu-item-338"
-										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-338">
-										<a href="#">Login</a>
-									</li>
-									<li id="menu-item-338"
-										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-338">
-										<a href="#">Signup</a>
-									</li>
-									<li id="menu-item-433"
-										class="menu-item menu-item-type-post_type menu-item-object-product menu-item-433">
-										<a href="http://demo.amytheme.com/movie/demo/book-ticket/product/gv-plaza/">Book
-											Ticket</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
+										</li>
+										<li id="menu-item-121"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-121">
+											<a href="#">Genre</a>
+											<ul class="sub-menu">
+												<li id="menu-item-123"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
+													<a
+														href="/dashboard#Action">Action</a>
+												</li>
+												<li id="menu-item-123"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
+													<a
+														href="/dashboard#Comedy">Comedy</a>
+												</li>
+												<li id="menu-item-327"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327">
+													<a
+														href="/dashboard#Drama">Drama</a>
+												</li>
+												<li id="menu-item-123"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
+													<a
+														href="/dashboard#Horror">Horror</a>
+												</li>
+												<li id="menu-item-325"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-325">
+													<a
+														href="/dashboard#Romance">Romance</a>
+												</li>
+											</ul>
+										</li>
+										<li id="menu-item-128"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-128">
+											<a href="#">About</a>
+										</li>
+										
+										<li id="menu-item-433"
+											class="menu-item menu-item-type-post_type menu-item-object-product menu-item-433">
+											<a href="/dashboard#BookTicket">Book
+												Ticket</a>
+										</li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+						
 					</div>
-
 				</div>
 			</div>
-	</div>
-	<div id="amy-site-header-shadow"></div>
-	</header>
+			<div id="amy-site-header-shadow"></div>
+		</header>
 
 	<div id="main">
 		<div id="content" class="site-content">
@@ -304,9 +365,9 @@
 										<div class="col-md-4 col-sm-4">
 											<div class="entry-thumb">
 												<img width="360" height="618"
-													src="http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2.jpg"
+													src="https://sql-project.s3.ap-south-1.amazonaws.com/movies/Avengers_+Endgame_360_618.jpg"
 													class="attachment-360x618 size-360x618" alt=""
-													srcset="http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2.jpg 360w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-175x300.jpg 175w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-264x454.jpg 264w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-174x300.jpg 174w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-258x444.jpg 258w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-214x368.jpg 214w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-196x336.jpg 196w"
+													srcset="https://sql-project.s3.ap-south-1.amazonaws.com/movies/Avengers_+Endgame_360_618.jpg 360w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-175x300.jpg 175w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-264x454.jpg 264w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-174x300.jpg 174w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-258x444.jpg 258w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-214x368.jpg 214w, http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_2-196x336.jpg 196w"
 													sizes="(max-width: 360px) 100vw, 360px" />
 											</div>
 										</div>
@@ -314,89 +375,31 @@
 											<div class="entry-info">
 
 												<h1 class="entry-title p-name" itemprop="name headline"><a
-														href="http://demo.amytheme.com/movie/demo/single-cinema/amy_movie/the-girl-on-the-train/"
-														rel="bookmark" class="u-url url" itemprop="url">The Girl On
-														The Train</a></h1>
+														href="#"
+														rel="bookmark" class="u-url url" itemprop="url">{{ data[1]['movie_name'] }}</a></h1>
 												<div class="entry-pg">
-													<span class="pg">G</span>
+													<span class="pg">{{ data[1]['movie_type'] }}</span>
 
 													<span class="duration">
 														<i class="fa fa-clock-o"></i>
-														02 hours 50 minutes </span>
+														{{ data[1]['duration'] }} </span>
 												</div>
 
 												<ul class="info-list">
-													<li>
-														<label>Actor:</label>
-														<span><a
-																href="http://demo.amytheme.com/movie/demo/single-cinema/amy_actor/alexander-cattly/">Alexander
-																Cattly</a>, <a
-																href="http://demo.amytheme.com/movie/demo/single-cinema/amy_actor/cartin-hollia/">Cartin
-																Hollia</a>, <a
-																href="http://demo.amytheme.com/movie/demo/single-cinema/amy_actor/greta-garbo/">Greta
-																Garbo</a></span>
-													</li>
-
-													<li>
-														<label>Director:</label>
-														<span><a
-																href="http://demo.amytheme.com/movie/demo/single-cinema/amy_director/gally-peckin/">Gally
-																Peckin</a>, <a
-																href="http://demo.amytheme.com/movie/demo/single-cinema/amy_director/grace-belly/">Grace
-																Belly</a></span>
-													</li>
+													
 
 													<li>
 														<label>Genre:</label>
-														<span><a
-																href="http://demo.amytheme.com/movie/demo/single-cinema/amy_genre/cartoon/">Cartoon</a>,
-															<a
-																href="http://demo.amytheme.com/movie/demo/single-cinema/amy_genre/drama/">Drama</a></span>
+														<span>{{ data[1]['genre'] }}</span>
 													</li>
 
-													<li>
-														<label>Release:</label>
-														<span>August 31, 2017</span>
-													</li>
-
-													<li>
-														<label>Language:</label>
-														<span>English</span>
-													</li>
-
-													<li>
-														<label>IMDB Rating:</label>
-														<span>7.9</span>
-													</li>
+													
 
 
 												</ul>
 											</div>
 
-											<div class="entry-content e-content" itemprop="description articleBody">
-												<h3 class="info-name amy-title">Synopsis</h3>
-												<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-													accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-													quae ab illo inventore veritatis et quasi architecto beatae
-													vitae dicta sunt explicabo.</p>
-												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-													aut fugit, sed quia consequuntur magni dolores eos qui ratione
-													voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-													ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-													non numquam eius modi tempora incidunt ut labore et dolore
-													magnam aliquam quaerat voluptatem.</p>
-												<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam
-													corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-													consequatur? Quis autem vel eum iure reprehenderit qui in ea
-													voluptate velit esse quam nihil molestiae consequatur, vel illum
-													qui dolorem eum fugiat quo voluptas nulla pariatur Lorem ipsum
-													dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-													tempor incididunt ut labore et dolore magna aliqua.</p>
-												<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
-													laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-													dolor in reprehenderit in voluptate velit esse cillum dolore eu
-													fugiat nulla pariatur.</p>
-											</div>
+											
 										</div>
 									</div>
 
@@ -410,31 +413,33 @@
 												<div class="st-item">
 													<div class="st-title"><label>Mon</label>
 													</div>
+													
 													<ul>
-														<li><a href="#billing_first_name">9:15 AM</a></li>
-														<li><a href="#billing_first_name">12:15 PM</a></li>
-														<li><a href="#billing_first_name">3:15 PM</a></li>
-														<li><a href="#billing_first_name">6:15 PM</a></li>
+														<!-- <li><a href="#billing_first_name" > <button class="my_button" name="buttonName" >9:15 AM</button></a></li>-->
+														<li><a href="#billing_first_name_field" > <button onclick="t1()" > 9:15 AM</button></a></li>
+														<li><a href="#billing_first_name_field"><button onclick="t2()"> 12:15 PM</button></a></li>
+														<li><a href="#billing_first_name_field"><button onclick="t3()">3:15 PM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t4()">6:15 PM</button</a></li>
 													</ul>
 												</div>
 												<div class="st-item">
 													<div class="st-title"><label>Tue</label>
 													</div>
 													<ul>
-														<li><a href="#billing_first_name">9:15 AM</a></li>
-														<li><a href="#billing_first_name">12:15 PM</a></li>
-														<li><a href="#billing_first_name">3:15 PM</a></li>
-														<li><a href="#billing_first_name">6:15 PM</a></li>
-														<li><a href="#billing_first_name">9:15 PM</a></li>
+														<li><a href="#billing_first_name" > <button onclick="t1()" > 9:15 AM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t2()"> 12:15 PM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t3()">3:15 PM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t4()">6:15 PM</button</a></li>
+														<li><a href="#billing_first_name"><button onclick="t5()">9:15 PM</button</a></li>
 													</ul>
 												</div>
 												<div class="st-item">
 													<div class="st-title"><label>Wed</label>
 													</div>
 													<ul>
-														<li><a href="#billing_first_name">9:15 AM</a></li>
-														<li><a href="#billing_first_name">12:15 PM</a></li>
-														<li><a href="#billing_first_name">3:15 PM</a></li>
+														<li><a href="#billing_first_name" > <button onclick="t1()" > 9:15 AM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t2()"> 12:15 PM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t3()">3:15 PM</button></a></li>
 														
 													</ul>
 												</div>
@@ -443,41 +448,41 @@
 													</div>
 													<ul>
 														
-														<li><a href="#billing_first_name">3:15 PM</a></li>
-														<li><a href="#billing_first_name">6:15 PM</a></li>
-														<li><a href="#billing_first_name">9:15 PM</a></li>
+														<li><a href="#billing_first_name" > <button onclick="t1()" > 9:15 AM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t4()">6:15 PM</button</a></li>
+															<li><a href="#billing_first_name"><button onclick="t5()">9:15 PM</button</a></li>
 													</ul>
 												</div>
 												<div class="st-item">
 													<div class="st-title"><label>Fri</label>
 													</div>
 													<ul>
-														<li><a href="#billing_first_name">9:15 AM</a></li>
-														<li><a href="#billing_first_name">12:15 PM</a></li>
-														<li><a href="#billing_first_name">3:15 PM</a></li>
+														<li><a href="#billing_first_name" > <button onclick="t1()" > 9:15 AM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t2()"> 12:15 PM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t3()">3:15 PM</button></a></li>
 														
-														<li><a href="#billing_first_name">9:15 PM</a></li>
+														<li><a href="#billing_first_name"><button onclick="t5()">9:15 PM</button</a></li>
 													</ul>
 												</div>
 												<div class="st-item">
 													<div class="st-title"><label>Sat</label>
 													</div>
 													<ul>
-														<li><a href="#billing_first_name">9:15 AM</a></li>
+														<li><a href="#billing_first_name" > <button onclick="t1()" > 9:15 AM</button></a></li>
 														
-														<li><a href="#billing_first_name">3:15 PM</a></li>
-														<li><a href="#billing_first_name">6:15 PM</a></li>
-														<li><a href="#billing_first_name">9:15 PM</a></li>
+														<li><a href="#billing_first_name"><button onclick="t3()">3:15 PM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t4()">6:15 PM</button</a></li>
+															<li><a href="#billing_first_name"><button onclick="t5()">9:15 PM</button</a></li>
 													</ul>
 												</div>
 												<div class="st-item">
 													<div class="st-title"><label>Sun</label></div>
 													<ul>
-														<li><a href="#billing_first_name">9:15 AM</a></li>
-														<li><a href="#billing_first_name">12:15 PM</a></li>
-														<li><a href="#billing_first_name">3:15 PM</a></li>
-														<li><a href="#billing_first_name">6:15 PM</a></li>
-														<li><a href="#billing_first_name">9:15 PM</a></li>
+														<li><a href="#billing_first_name" > <button onclick="t1()" > 9:15 AM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t2()"> 12:15 PM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t3()">3:15 PM</button></a></li>
+														<li><a href="#billing_first_name"><button onclick="t4()">6:15 PM</button</a></li>
+															<li><a href="#billing_first_name"><button onclick="t5()">9:15 PM</button</a></li>
 													</ul>
 												</div>
 											</div>
@@ -504,7 +509,7 @@
 																class="woocommerce-input-wrapper"><input type="text"
 																	class="input-text " name="billing_first_name"
 																	id="billing_first_name" placeholder="Enter Location"
-																	value="" autocomplete="given-name" /></span></p>
+																	required /></span></p>
 														<p class="form-row form-row-last validate-required"
 															id="billing_last_name_field" data-priority="20"><label
 																for="billing_last_name" class="">Age&nbsp;<abbr
@@ -518,7 +523,7 @@
 
 													<div class="container">
 
-														<button class="btn btn3">Book Ticket</button>
+														<button class="btn btn3" > <a href="{{ url_for('choosetheatre') }}"></a> Book Ticket</button>
 
 													</div>
 
@@ -539,28 +544,10 @@
 				<div class="row">
 					<div class="col-md-3 col-xs-12">
 						<div class="amy-widget amy-widget-module">
-							<div class="amy-widget amy-widget-module about ">
-								<div class="footer-logo"><a
-										href="http://demo.amytheme.com/movie/demo/single-cinema/"><img width="155"
-											height="51"
-											src="http://demo.amytheme.com/movie/demo/single-cinema/wp-content/uploads/2019/04/img_65.png"
-											class="attachment-full size-full" alt="" /></a></div>
-								<div class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-									eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-									veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat</div>
-							</div>
+							
 							<div class="clear"></div>
 						</div>
-						<div class="amy-widget amy-widget-module">
-							<div class="amy-widget amy-widget-module social ">
-								<ul class="amy-social-list">
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-								</ul>
-							</div>
-							<div class="clear"></div>
-						</div>
+						
 					</div>
 					<div class="col-md-3 col-xs-12">
 						<div class="amy-widget widget_nav_menu">
@@ -571,16 +558,13 @@
 								<ul id="menu-footer-menu" class="menu">
 									<li id="menu-item-239"
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-75 current_page_item menu-item-239">
-										<a href="http://demo.amytheme.com/movie/demo/single-cinema/"
+										<a href="/dashboard"
 											aria-current="page">Home</a>
 									</li>
-									<li id="menu-item-237"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237">
-										<a href="http://demo.amytheme.com/movie/demo/single-cinema/contact/">Contact</a>
-									</li>
+									
 									<li id="menu-item-238"
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238">
-										<a href="http://demo.amytheme.com/movie/demo/single-cinema/top-rated/">Now
+										<a href="/dashboard#BookTicket">Now
 											Playing</a>
 									</li>
 								</ul>
@@ -625,34 +609,6 @@
 		</div>
 		</div>
 	</footer>
-	<div id="amy-copyright" class="amy-copyright">
-		<div class="container">
-			<div class="amy-inner">
-				<div class="amy-copyright-left pull-left">
-					<div class="amy-copyright-module amy-module-text " style="">
-
-						©copyright 2016 Movie
-					</div>
-				</div>
-				<div class="amy-copyright-right pull-right">
-					<div class="amy-copyright-module amy-module-menu " style="">
-						<div class="amy-menu">
-							<ul class="menu">
-								<li class="menu-item"><a
-										href="http://demo.amytheme.com/movie/demo/single-cinema/">Home</a></li>
-								<li class="menu-item"><a
-										href="http://demo.amytheme.com/movie/demo/single-cinema/contact/">Contact</a>
-								</li>
-								<li class="menu-item"><a
-										href="http://demo.amytheme.com/movie/demo/single-cinema/top-rated/">Now
-										Playing</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	</div>
 
 	<script>(function () {
