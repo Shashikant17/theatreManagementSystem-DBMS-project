@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--[if IE]><![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="pingback" href="http://demo.amytheme.com/movie/demo/book-ticket/xmlrpc.php" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='woocomerse.css') }}">
+
+
+    <title>Choose Theatre</title>
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="AmyMovie &raquo; Feed"
+        href="http://demo.amytheme.com/movie/demo/book-ticket/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="AmyMovie &raquo; Comments Feed"
+        href="http://demo.amytheme.com/movie/demo/book-ticket/comments/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="AmyMovie &raquo; Products Feed"
+        href="http://demo.amytheme.com/movie/demo/book-ticket/shop/feed/" />
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "http:\/\/demo.amytheme.com\/movie\/demo\/book-ticket\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.7" } };
+        !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode; p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0); e = i.toDataURL(); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (!p || !p.fillText) return !1; switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([55357, 56424, 55356, 57342, 8205, 55358, 56605, 8205, 55357, 56424, 55356, 57340], [55357, 56424, 55356, 57342, 8203, 55358, 56605, 8203, 55357, 56424, 55356, 57340]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-includes/css/dist/block-library/style.min.css?ver=5.3.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-block-style-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.5.11'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.6'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.3.0.2'
+        type='text/css' media='all' />
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {}
+    </style>
+    <link rel='stylesheet' id='amy-woocommerce-css' href='D:\p1\static\woocomerse.css' type='text/css' media='all' />
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <link rel='stylesheet' id='google-font-roboto-condensed-css'
+        href='https://fonts.googleapis.com/css?family=Roboto+Condensed&#038;ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='amy-movie-google-fonts-css'
+        href='//fonts.googleapis.com/css?family=Roboto+Condensed%3A400%2C700&#038;ver=5.3.7#038;subset=latin'
+        type='text/css' media='all' />
+    <link rel="stylesheet" href="{{ url_for('static', filename='woocomerse.css') }}">
+    <link rel='stylesheet' id='slick-style-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/slick.css?ver=5.3.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-theme-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/slick-theme.css?ver=5.3.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='fancybox-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/jquery.fancybox.css?ver=3.5.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='tooltipster-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/tooltipster.bundle.css?ver=1.0.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='mCustomScrollbar-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/jquery.mCustomScrollbar.css?ver=1.0.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='plyr-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/plyr.css?ver=1.0.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='amy-movie-style-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/style.css?ver=1.0.0'
+        type='text/css' media='all' />
+    <style id='amy-movie-style-inline-css' type='text/css'>
+        .page-content .vc_custom_1482289028327 {
+            background-position: top center !important;
+        }
+
+        .product-buy-ticket .product .quantity,
+        .product-buy-ticket .woocommerce-related-products {
+            display: none !important;
+        }
+
+        body {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        #amy-site-nav .menu-item a {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        #amy-site-nav .sub-menu .menu-item a {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        .amy-tab ul li a {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .rate,
+        .entry-date,
+        .pg {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .amy-primary-navigation ul.nav-menu>li>a::after {
+            width: 0 !important;
+        }
+
+        #amy-page-header {
+            background-image: url(http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/revslider/movie-cinema-slider/mvcnm2.jpg);
+        }
+    </style>
+  <!--  <script>
+        function different(){
+            window.open("http://127.0.0.1:5000/choosetheatre/different"); 
+        }
+    </script>-->
+
+    <script>
+		function loca() {
+			var location = "{{ data[0]['location'] }}"
+            var theratre_name="{{ data[0]['hall_name'] }}"
+            var p="{{ data[0]['price'] }}"
+			var xhr = new XMLHttpRequest();
+			var url = "http://localhost:5000/location/" + location+","+theratre_name+ ","+p;
+            
+            xhr.open('GET', url, false);
+            
+            xhr.send();
+			var retrievedtext = xhr.responseText;
+            
+		}
+	</script>
+    <script src="https://kit.fontawesome.com/1962756006.js" crossorigin="anonymous"></script>
+    
+    <noscript>
+        <style>
+            .woocommerce-product-gallery {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
+    <meta name="generator"
+        content="Powered by Slider Revolution 5.3.0.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <noscript>
+        <style>
+            .wpb_animate_when_almost_visible {
+                opacity: 1;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body
+    class="archive post-type-archive post-type-archive-product theme-amy-movie woocommerce woocommerce-page woocommerce-no-js amy-header-default  single-author hfeed h-feed feed wpb-js-composer js-comp-ver-6.1 vc_responsive" style="background-color:#CAFAFE;">
+    <div id="page" class="hfeed site">
+
+        <header id="masthead" class="site-header header-default has-search light">
+			<div class="container">
+				<div class="amy-inner">
+					<div class="amy-left">
+						<div id="amy-site-logo">
+							<a href="{{ url_for('dashboard') }}">
+								<img class="amy-logo amy-logo1x"
+									src="https://uditagarwals3.s3.ap-south-1.amazonaws.com/logo.png" height="200"
+									width="200" alt="AmyMovie" /></a>
+						</div>
+					</div>
+					<div class="amy-right">
+						<nav id="amy-site-nav" class="amy-site-navigation amy-primary-navigation">
+							<div class="menu-mainnav-container">
+								<ul id="menu-mainnav" class="nav-menu">
+									<li id="menu-item-74"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-73 current_page_item menu-item-has-children menu-item-74">
+										<a href="{{ url_for('dashboard') }}" aria-current="page"><i class="fas fa-home"></i> Dashboard</a>
+
+									</li>
+									<li id="menu-item-121"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-121">
+										<a href="#"><i class="fas fa-film"></i> Genre</a>
+										<ul class="sub-menu">
+											<li id="menu-item-123"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
+												<a href="/dashboard#Action">Action</a>
+											</li>
+											
+											<li id="menu-item-327"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327">
+												<a href="/dashboard#Drama">Drama</a>
+											</li>
+											
+											<li id="menu-item-325"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-325">
+												<a href="/dashboard#sifi">Si-Fi</a>
+											</li>
+										</ul>
+									</li>
+									<li id="menu-item-128"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-128">
+										<a href="#amy-colophon"><i class="far fa-address-card"></i> About</a>
+									</li>
+
+									<li id="menu-item-433"
+										class="menu-item menu-item-type-post_type menu-item-object-product menu-item-433">
+										<a href="/dashboard#BookTicket"><i class="fas fa-ticket-alt"></i> Book
+											Ticket</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+
+				</div>
+			</div>
+	</div>
+		<div id="amy-site-header-shadow"></div>
+		</header>
+
+
+    <div id="main">
+        <div id="content" class="site-content">
+
+
+            <section id="amy-page-header" class=" ">
+                <div class="amy-page-title amy-left">
+                    <div class="amy-inner container">
+                        <h1 class="page-title"></h1>
+                        <div class="amy-breadcrumb"><span property="itemListElement" typeof="ListItem"><a
+                                    property="item" typeof="WebPage" title="Go to AmyMovie."
+                                    href="{{ url_for('dashboard') }}" class="home"><span
+                                        property="name">MovieBooking</span></a>
+                                <meta property="position" content="1">
+                            </span> &gt; <span class="archive post-product-archive current-item">Theatre details</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="main-content">
+                <div class="main-content-wrapper container">
+                    <div class="content-wrap-inner">
+
+                        <div class="col-md-12">
+                            <div class="page-content">
+
+                                <div class="woocommerce-toolbar">
+                                    <div class="woocommerce-toolbar-left">
+                                        <div class="woocommerce-notices-wrapper">                                            
+                                        </div>
+                                        <div class="woocommerce-view-mode">
+                                            <a class="amy-grid-view-button active hint--top hint--rounded hint--bounce"
+                                                href="#" aria-label="Grid View"><i class="fas fa-th"></i></a>
+                                            <a class="amy-list-view-button hint--top hint--rounded hint--bounce"
+                                                href="#" aria-label="List View"><i class="fas fa-bars"></i></a>
+                                        </div>
+                                    </div>
+
+                                        <div class="woocommerce-toolbar-center"><span class="woocommerce-result-count">
+                                                Showing {{ length }} results</span>
+                                        </div>
+                                        <div class="woocommerce-toolbar-right">
+                                            <form class="woocommerce-ordering" method="GET">
+                                                <div class="select-style">
+                                                    <select name="orderby" class="orderby">
+                                                        <option value="menu_order" selected='selected'>Default sorting
+                                                        </option>
+                                                         <option value="different_location" onclick="window.location='/choosetheatre/different'"> Different Location</option>
+                                                        
+                                                    </select>
+                                                </div>
+                                            </form>
+                                        </div>
+                                </div>
+
+
+                                    <div class="products">
+                                        <div class="row">
+
+
+
+                                            <div
+                                                class="col-sm-6 col-md-3 post-430 product type-product status-publish has-post-thumbnail product_cat-uncategorized first instock shipping-taxable purchasable product-type-simple h-entry hentry">
+                                                <div class="product-wrapper">
+                                                    <div class="product-image-wrapper">
+                                                        
+                                                            <span class="primary-image"><img width="300" height="300"
+                                                                    src="{{ data[0]['url300'] }}"
+                                                                    class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                    alt=""
+                                                                    srcset="{{ data[0]['url300'] }} 300w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" /></span>
+                                                            
+                                                           <!-- <span class="secondary-image"><img width="300" height="300"
+                                                                    src="http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2016/12/img_59-300x300.jpg"
+                                                                    class="attachment-shop_catalog size-shop_catalog"
+                                                                    alt=""
+                                                                    srcset="http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2016/12/img_59-300x300.jpg 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2016/12/img_59-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2016/12/img_59-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" /></span>-->
+                                                        
+                                                    </div>
+                                                    <div class="product-description-wrapper">
+                                                        <h2 class="woocommerce-loop-product__title"><a
+                                                                href="#"><span style="text-transform:capitalize">
+                                                                {{ data[0]['hall_name'] }}</span></a></h2>
+                                                        <h3 class="woocommerce-loop-product__title"><a
+                                                                    href="#">{{ data[0]['location'] }}</a></h3>
+                                                        <div class="entry-product-meta">
+                                                            <p class="price"><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span>{{ data[0]['price'] }}</span>
+                                                            </p>
+                                                            <div class="product-short-description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <div class="product-buttons-inner">
+                                                            <div class="woocommerce_loop_add_to_cart_button hint--top hint--rounded hint--bounce"
+                                                                aria-label="Add to cart"><p  onclick="loca()"><a href="{{ url_for('login') }}"
+                                                                    data-quantity="1"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    > Add to cart</a></p>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                         <!--   <div
+                                                class="col-sm-6 col-md-3 post-431 product type-product status-publish has-post-thumbnail product_cat-uncategorized  instock shipping-taxable purchasable product-type-simple h-entry hentry">
+                                                <div class="product-wrapper">
+                                                    <div class="product-image-wrapper">
+                                                        <a
+                                                            href="http://demo.amytheme.com/movie/demo/book-ticket/product/gv-vivocity/">
+                                                            <span class="primary-image"><img width="300" height="300"
+                                                                    src="http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-300x300.jpg"
+                                                                    class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                    alt=""
+                                                                    srcset="http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-300x300.jpg 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" /></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-description-wrapper">
+                                                        <h3 class="woocommerce-loop-product__title"><a
+                                                                href="http://demo.amytheme.com/movie/demo/book-ticket/product/gv-vivocity/">GV
+                                                                Vivocity</a></h3>
+                                                        <div class="entry-product-meta">
+                                                            <p class="price"><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span>10.00</span>
+                                                            </p>
+                                                            <div class="product-short-description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <div class="product-buttons-inner">
+                                                            <div class="woocommerce_loop_add_to_cart_button hint--top hint--rounded hint--bounce"
+                                                                aria-label="Add to cart"><a href="http://demo.amytheme.com/movie/demo/book-ticket/checkout/"
+                                                                    data-quantity="1"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    >Add to cart</a>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>-->
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </section>
+
+
+        </div>
+    </div>
+
+    <footer id="amy-colophon" class="amy-site-footer">
+        <div class="container">
+            <div class="amy-footer-widgets">
+                <div class="row">
+                    <div class="col-md-3 col-xs-12">
+                        <div class="amy-widget amy-widget-module">
+                            
+                            <div class="clear"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="amy-widget widget_nav_menu">
+                            <div class="amy-widget-title">
+                                <h4>Custom Services</h4>
+                            </div>
+                            <div class="amy-widget-content">
+                                <ul id="menu-footer-menu" class="menu">
+                                    <li id="menu-item-239"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-75 current_page_item menu-item-239">
+                                        <a href="/dashboard"
+                                            aria-current="page">Home</a>
+                                    </li>
+                                    
+                                    <li id="menu-item-238"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238">
+                                        <a href="/dashboard#BookTicket">Now
+                                            Playing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-12">
+                        <div class="amy-widget amy-widget-module">
+                            <div class="amy-widget amy-widget-module contact ">
+                                <h4 class="amy-title amy-widget-title">Contact Us</h4>
+                                <div class="address"><i class="fa fa-location-arrow" aria-hidden="true"></i>JK
+                                    Lakshmipat University, Mahapura,Jaipur Rajasthan</div>
+                                <div class="email"><i class="fa fa-envelope-o"
+                                        aria-hidden="true"></i>Moviesvoom@gmail.com</div>
+                                <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i>99282 50803</div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="amy-widget widget_mc4wp_form_widget">
+                            <script>(function () {
+                                    window.mc4wp = window.mc4wp || {
+                                        listeners: [],
+                                        forms: {
+                                            on: function (evt, cb) {
+                                                window.mc4wp.listeners.push(
+                                                    {
+                                                        event: evt,
+                                                        callback: cb
+                                                    }
+                                                );
+                                            }
+                                        }
+                                    }
+                                })();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+</div>
+
+<script>(function () {
+        function maybePrefixUrlField() {
+            if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+                this.value = "http://" + this.value;
+            }
+        }
+
+        var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+        if (urlFields) {
+            for (var j = 0; j < urlFields.length; j++) {
+                urlFields[j].addEventListener('blur', maybePrefixUrlField);
+            }
+        }
+    })();</script>
+<script type="text/html" id="wpb-modifications"></script>
+<link rel='stylesheet' id='prettyphoto-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/prettyphoto/css/prettyPhoto.min.css?ver=6.1'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='vc_font_awesome_5_shims-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/v4-shims.min.css?ver=6.1'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='vc_font_awesome_5-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/all.min.css?ver=6.1'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css?ver=6.1'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='vc_animate-css-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=6.1'
+    type='text/css' media='all' />
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/amy-user/assets/js/vendor/jquery.fancybox.js?ver=2.1.5'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var amy_user_script = { "ajax_url": "http:\/\/demo.amytheme.com\/movie\/demo\/single-cinema\/wp-admin\/admin-ajax.php", "enable_fb_login": "1", "fb_app_id": "", "enable_google_login": "1", "gg_app_id": "", "gg_client_id": "" };
+        /* ]]> */
+</script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/amy-user/assets/js/script.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var wpcf7 = { "apiSettings": { "root": "http:\/\/demo.amytheme.com\/movie\/demo\/single-cinema\/wp-json\/contact-form-7\/v1", "namespace": "contact-form-7\/v1" } };
+        /* ]]> */
+</script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.6'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/slick.min.js?ver=1.6.0'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/isotope.pkgd.js?ver=3.0.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/masonry-horizontal.js?ver=2.0.0'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/kinetic.js?ver=2.0.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/smoothdivscroll.js?ver=1.3'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/jquery.mousewheel.min.js?ver=3.1.11'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+    jQuery(document).ready(function (jQuery) { jQuery.datepicker.setDefaults({ "closeText": "Close", "currentText": "Today", "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "nextText": "Next", "prevText": "Previous", "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"], "dateFormat": "MM d, yy", "firstDay": 1, "isRTL": false }); });
+</script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/bootstrap-tab.js?ver=3.3.6'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/tooltipster.bundle.js?ver=1.0.0'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/jquery.waterwheelCarousel.js?ver=2.3.0'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/TweenMax.min.js?ver=1.15.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/jquery.mCustomScrollbar.js?ver=3.1.5'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/plyr.js?ver=1.0.0'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/vendor/reflection.js?ver=1.11.0'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var amy_script = { "ajax_url": "http:\/\/demo.amytheme.com\/movie\/demo\/single-cinema\/wp-admin\/admin-ajax.php", "viewport": "992", "site_url": "http:\/\/demo.amytheme.com\/movie\/demo\/single-cinema\/", "theme_url": "http:\/\/demo.amytheme.com\/movie\/demo\/single-cinema\/wp-content\/themes\/amy-movie", "enable_fb_login": null, "fb_app_id": null, "enable_google_login": null, "gg_app_id": null, "gg_client_id": null, "amy_rtl": "", "amy_rate_already": "You already rate a movie", "amy_rate_done": "You vote done" };
+        /* ]]> */
+</script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/themes/amy-movie/js/script.js?ver=1.0.0'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-includes/js/wp-embed.min.js?ver=5.3.6'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.min.js?ver=6.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/masonry/dist/masonry.pkgd.min.js?ver=6.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=6.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=6.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/vc_waypoints/vc-waypoints.min.js?ver=6.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=6.1'></script>
+<script type='text/javascript'
+    src='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/mailchimp-for-wp/assets/js/forms.min.js?ver=4.7.5'></script>
+
+</div>
+</body>
+
+</html>

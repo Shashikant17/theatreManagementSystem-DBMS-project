@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--[if IE]><![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="pingback" href="http://demo.amytheme.com/movie/demo/book-ticket/xmlrpc.php" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='woocomerse.css') }}">
+
+
+    <title>Choose Theatre</title>
+   
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-includes/css/dist/block-library/style.min.css?ver=5.3.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-block-style-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.5.11'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.6'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.3.0.2'
+        type='text/css' media='all' />
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {}
+    </style>
+    <link rel='stylesheet' id='amy-woocommerce-css' href='D:\p1\static\woocomerse.css' type='text/css' media='all' />
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <link rel='stylesheet' id='google-font-roboto-condensed-css'
+        href='https://fonts.googleapis.com/css?family=Roboto+Condensed&#038;ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='amy-movie-google-fonts-css'
+        href='//fonts.googleapis.com/css?family=Roboto+Condensed%3A400%2C700&#038;ver=5.3.7#038;subset=latin'
+        type='text/css' media='all' />
+    <link rel="stylesheet" href="{{ url_for('static', filename='woocomerse.css') }}">
+    <link rel='stylesheet' id='slick-style-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/slick.css?ver=5.3.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-theme-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/slick-theme.css?ver=5.3.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='fancybox-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/jquery.fancybox.css?ver=3.5.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='tooltipster-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/tooltipster.bundle.css?ver=1.0.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='mCustomScrollbar-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/jquery.mCustomScrollbar.css?ver=1.0.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='plyr-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/plyr.css?ver=1.0.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='amy-movie-style-css'
+        href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/style.css?ver=1.0.0'
+        type='text/css' media='all' />
+    <style id='amy-movie-style-inline-css' type='text/css'>
+        .page-content .vc_custom_1482289028327 {
+            background-position: top center !important;
+        }
+
+        .product-buy-ticket .product .quantity,
+        .product-buy-ticket .woocommerce-related-products {
+            display: none !important;
+        }
+
+        body {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        #amy-site-nav .menu-item a {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        #amy-site-nav .sub-menu .menu-item a {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        .amy-tab ul li a {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .rate,
+        .entry-date,
+        .pg {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .amy-primary-navigation ul.nav-menu>li>a::after {
+            width: 0 !important;
+        }
+
+        #amy-page-header {
+            background-image: url(http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/revslider/movie-cinema-slider/mvcnm2.jpg);
+        }
+    </style>
+  <!--  <script>
+        function different(){
+            window.open("http://127.0.0.1:5000/choosetheatre/different"); 
+        }
+    </script>-->
+
+    <script>
+		function loca0() {
+			var location = "{{ data[0]['location'] }}"
+            var theratre_name="{{ data[0]['hall_name'] }}"
+            var p="{{ data[0]['price'] }}"
+			var xhr = new XMLHttpRequest();
+			var url = "http://localhost:5000/location/" + location+","+theratre_name+ ","+p;
+            
+            xhr.open('GET', url, false);
+            
+            xhr.send();
+			var retrievedtext = xhr.responseText;
+            
+		}
+        function loca1() {
+			var location = "{{ data[1]['location'] }}"
+            var theratre_name="{{ data[1]['hall_name'] }}"
+            var p="{{ data[1]['price'] }}"
+			var xhr = new XMLHttpRequest();
+			var url = "http://localhost:5000/location/" + location+","+theratre_name+ ","+p;
+            
+            xhr.open('GET', url, false);
+            
+            xhr.send();
+			var retrievedtext = xhr.responseText;
+            
+		}
+        function loca2() {
+			var location = "{{ data[2]['location'] }}"
+            var theratre_name="{{ data[2]['hall_name'] }}"
+            var p="{{ data[2]['price'] }}"
+			var xhr = new XMLHttpRequest();
+			var url = "http://localhost:5000/location/" + location+","+theratre_name+ ","+p;
+            
+            xhr.open('GET', url, false);
+            
+            xhr.send();
+			var retrievedtext = xhr.responseText;
+            
+		}
+        function loca3() {
+			var location = "{{ data[3]['location'] }}"
+            var theratre_name="{{ data[3]['hall_name'] }}"
+            var p="{{ data[3]['price'] }}"
+			var xhr = new XMLHttpRequest();
+			var url = "http://localhost:5000/location/" + location+","+theratre_name+ ","+p;
+            
+            xhr.open('GET', url, false);
+            
+            xhr.send();
+			var retrievedtext = xhr.responseText;
+            
+		}
+        function loca4() {
+			var location = "{{ data[4]['location'] }}"
+            var theratre_name="{{ data[4]['hall_name'] }}"
+            var p="{{ data[4]['price'] }}"
+			var xhr = new XMLHttpRequest();
+			var url = "http://localhost:5000/location/" + location+","+theratre_name+ ","+p;
+            
+            xhr.open('GET', url, false);
+            
+            xhr.send();
+			var retrievedtext = xhr.responseText;
+            
+		}
+        function loca5() {
+			var location = "{{ data[5]['location'] }}"
+            var theratre_name="{{ data[5]['hall_name'] }}"
+            var p="{{ data[5]['price'] }}"
+			var xhr = new XMLHttpRequest();
+			var url = "http://localhost:5000/location/" + location+","+theratre_name+ ","+p;
+            
+            xhr.open('GET', url, false);
+            
+            xhr.send();
+			var retrievedtext = xhr.responseText;
+            
+		}
+	</script>
+    
+    <script src="https://kit.fontawesome.com/1962756006.js" crossorigin="anonymous"></script>
+   
+    <noscript>
+        <style>
+            .woocommerce-product-gallery {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+    
+    <noscript>
+        <style>
+            .wpb_animate_when_almost_visible {
+                opacity: 1;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body
+    class="archive post-type-archive post-type-archive-product theme-amy-movie woocommerce woocommerce-page woocommerce-no-js amy-header-default  single-author hfeed h-feed feed wpb-js-composer js-comp-ver-6.1 vc_responsive" style="background-color:#CAFAFE;">
+    <div id="page" class="hfeed site">
+
+        
+        <header id="masthead" class="site-header header-default has-search light">
+			<div class="container">
+				<div class="amy-inner">
+					<div class="amy-left">
+						<div id="amy-site-logo">
+							<a href="{{ url_for('dashboard') }}">
+								<img class="amy-logo amy-logo1x"
+									src="https://uditagarwals3.s3.ap-south-1.amazonaws.com/logo.png" height="200"
+									width="200" alt="AmyMovie" /></a>
+						</div>
+					</div>
+					<div class="amy-right">
+						<nav id="amy-site-nav" class="amy-site-navigation amy-primary-navigation">
+							<div class="menu-mainnav-container">
+								<ul id="menu-mainnav" class="nav-menu">
+									<li id="menu-item-74"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-73 current_page_item menu-item-has-children menu-item-74">
+										<a href="{{ url_for('dashboard') }}" aria-current="page"><i class="fas fa-home"></i> Dashboard</a>
+
+									</li>
+									<li id="menu-item-121"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-121">
+										<a href="#"><i class="fas fa-film"></i> Genre</a>
+										<ul class="sub-menu">
+											<li id="menu-item-123"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
+												<a href="/dashboard#Action">Action</a>
+											</li>
+											
+											<li id="menu-item-327"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327">
+												<a href="/dashboard#Drama">Drama</a>
+											</li>
+											
+											<li id="menu-item-325"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-325">
+												<a href="/dashboard#sifi">Si-Fi</a>
+											</li>
+										</ul>
+									</li>
+									<li id="menu-item-128"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-128">
+										<a href="#amy-colophon"><i class="far fa-address-card"></i> About</a>
+									</li>
+
+									<li id="menu-item-433"
+										class="menu-item menu-item-type-post_type menu-item-object-product menu-item-433">
+										<a href="/dashboard#BookTicket"><i class="fas fa-ticket-alt"></i> Book
+											Ticket</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="amy-site-header-shadow"></div>
+		</header>
+
+
+    <div id="main">
+        <div id="content" class="site-content">
+
+
+            <section id="amy-page-header" class=" ">
+                <div class="amy-page-title amy-left">
+                    <div class="amy-inner container">
+                        <h1 class="page-title"></h1>
+                        <div class="amy-breadcrumb"><span property="itemListElement" typeof="ListItem"><a
+                                    property="item" typeof="WebPage" title="Go to AmyMovie."
+                                    href="http://demo.amytheme.com/movie/demo/book-ticket" class="home"><span
+                                        property="name">MovieBooking</span></a>
+                                <meta property="position" content="1">
+                            </span> &gt; <span class="archive post-product-archive current-item">Theatre details</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="main-content">
+                <div class="main-content-wrapper container">
+                    <div class="content-wrap-inner">
+
+                        <div class="col-md-12">
+                            <div class="page-content">
+
+                                <div class="woocommerce-toolbar">
+                                    <div class="woocommerce-toolbar-left">
+                                        <div class="woocommerce-notices-wrapper">                                            
+                                        </div>
+                                        <div class="woocommerce-view-mode">
+                                            <a class="amy-grid-view-button active hint--top hint--rounded hint--bounce"
+                                                href="#" aria-label="Grid View"><i class="fas fa-th"></i></a>
+                                            <a class="amy-list-view-button hint--top hint--rounded hint--bounce"
+                                                href="#" aria-label="List View"><i class="fas fa-bars"></i></a>
+                                        </div>
+                                    </div>
+
+                                        <div class="woocommerce-toolbar-center"><span class="woocommerce-result-count">
+                                                Showing all {{ length }} results</span>
+                                        </div>
+                                        <div class="woocommerce-toolbar-right">
+                                            <form class="woocommerce-ordering" method="GET">
+                                                <div class="select-style">
+                                                    <select name="orderby" class="orderby">
+                                                        <option value="menu_order"  onclick="window.location='/choosetheatre'">Default sorting
+                                                        </option>
+                                                         <option value="different_location" selected='selected'> Different Location</option>
+                                                        
+                                                    </select>
+                                                </div>
+                                            </form>
+                                        </div>
+                                </div>
+
+
+                                    <div class="products">
+                                        <div class="row">
+
+
+
+                                            <div
+                                                class="col-sm-6 col-md-3 post-430 product type-product status-publish has-post-thumbnail product_cat-uncategorized first instock shipping-taxable purchasable product-type-simple h-entry hentry">
+                                                <div class="product-wrapper">
+                                                    <div class="product-image-wrapper">
+                                                        
+                                                            <span class="primary-image"><img width="300" height="300"
+                                                                    src="{{ data[0]['url300'] }}"
+                                                                    class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                    alt=""
+                                                                    srcset="{{ data[0]['url300'] }} 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" /></span>
+                                                           <!-- <span class="secondary-image"><img width="300" height="300"
+                                                                    src="http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2016/12/img_59-300x300.jpg"
+                                                                    class="attachment-shop_catalog size-shop_catalog"
+                                                                    alt=""
+                                                                    srcset="http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2016/12/img_59-300x300.jpg 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2016/12/img_59-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2016/12/img_59-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" /></span>-->
+                                                        
+                                                    </div>
+                                                    <div class="product-description-wrapper">
+                                                        <h3 class="woocommerce-loop-product__title"><a
+                                                                href="#">{{ data[0]['hall_name'] }}</a></h3>
+                                                                <h5 class="woocommerce-loop-product__title"><a
+                                                                    href="#"><span style="text-transform:capitalize">{{ data[0]['location'] }}</span></a></h5>
+                                                        <div class="entry-product-meta">
+                                                            <p class="price"><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span>{{ data[0]['price'] }}</span>
+                                                            </p>
+                                                            <div class="product-short-description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <div class="product-buttons-inner">
+                                                            <div class="woocommerce_loop_add_to_cart_button hint--top hint--rounded hint--bounce"
+                                                                aria-label="Add to cart"><p  onclick="loca0()"><a href="{{ url_for('login') }}"
+                                                                    data-quantity="1"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    > Add to cart</a></p>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>                                        
+                                            <div
+                                                class="col-sm-6 col-md-3 post-431 product type-product status-publish has-post-thumbnail product_cat-uncategorized  instock shipping-taxable purchasable product-type-simple h-entry hentry">
+                                                <div class="product-wrapper">
+                                                    <div class="product-image-wrapper">
+                                                            <span class="primary-image"><img width="300" height="300"
+                                                                    src="{{ data[1]['url300'] }}"
+                                                                    class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                    alt=""
+                                                                    srcset="{{ data[1]['url300'] }} 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" />
+                                                            </span>
+                                                        
+                                                    </div>
+                                                    <div class="product-description-wrapper">
+                                                        <h3 class="woocommerce-loop-product__title"><a
+                                                                href="#">{{ data[1]['hall_name'] }}</a></h3>
+                                                                <h5 class="woocommerce-loop-product__title"><a
+                                                                    href="#">{{ data[1]['location'] }}</a></h5>
+                                                        <div class="entry-product-meta">
+                                                            <p class="price"><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span>{{ data[1]['price'] }}</span>
+                                                            </p>
+                                                            <div class="product-short-description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <div class="product-buttons-inner">
+                                                            <div class="woocommerce_loop_add_to_cart_button hint--top hint--rounded hint--bounce"
+                                                                aria-label="Add to cart"><p  onclick="loca1()"><a href="{{ url_for('login') }}"
+                                                                    data-quantity="1"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    > Add to cart</a></p>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div
+                                                class="col-sm-6 col-md-3 post-431 product type-product status-publish has-post-thumbnail product_cat-uncategorized  instock shipping-taxable purchasable product-type-simple h-entry hentry">
+                                                <div class="product-wrapper">
+                                                    <div class="product-image-wrapper">
+                                                            <span class="primary-image"><img width="300" height="300"
+                                                                    src="{{ data[2]['url300'] }}"
+                                                                    class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                    alt=""
+                                                                    srcset="{{ data[2]['url300'] }} 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" />
+                                                            </span>
+                                                        
+                                                    </div>
+                                                    <div class="product-description-wrapper">
+                                                        <h3 class="woocommerce-loop-product__title"><a
+                                                                href="#">{{ data[2]['hall_name'] }}</a></h3>
+                                                                <h5 class="woocommerce-loop-product__title"><a
+                                                                    href="#">{{ data[2]['location'] }}</a></h5>
+                                                        <div class="entry-product-meta">
+                                                            <p class="price"><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span>{{ data[2]['price'] }}</span>
+                                                            </p>
+                                                            <div class="product-short-description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <div class="product-buttons-inner">
+                                                            <div class="woocommerce_loop_add_to_cart_button hint--top hint--rounded hint--bounce"
+                                                                aria-label="Add to cart"><p  onclick="loca2()"><a href="{{ url_for('login') }}"
+                                                                    data-quantity="1"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    > Add to cart</a></p>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div
+                                                class="col-sm-6 col-md-3 post-431 product type-product status-publish has-post-thumbnail product_cat-uncategorized  instock shipping-taxable purchasable product-type-simple h-entry hentry">
+                                                <div class="product-wrapper">
+                                                    <div class="product-image-wrapper">
+                                                            <span class="primary-image"><img width="300" height="300"
+                                                                    src="{{ data[3]['url300'] }}"
+                                                                    class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                    alt=""
+                                                                    srcset="{{ data[3]['url300'] }} 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" />
+                                                            </span>
+                                                        
+                                                    </div>
+                                                    <div class="product-description-wrapper">
+                                                        <h3 class="woocommerce-loop-product__title"><a
+                                                                href="#">{{ data[3]['hall_name'] }}</a></h3>
+                                                                <h5 class="woocommerce-loop-product__title"><a
+                                                                    href="#">{{ data[3]['location'] }}</a></h5>
+                                                        <div class="entry-product-meta">
+                                                            <p class="price"><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span>{{ data[3]['price'] }}</span>
+                                                            </p>
+                                                            <div class="product-short-description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <div class="product-buttons-inner">
+                                                            <div class="woocommerce_loop_add_to_cart_button hint--top hint--rounded hint--bounce"
+                                                                aria-label="Add to cart"><p  onclick="loca3()"><a href="{{ url_for('login') }}"
+                                                                    data-quantity="1"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    > Add to cart</a></p>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div
+                                                class="col-sm-6 col-md-3 post-431 product type-product status-publish has-post-thumbnail product_cat-uncategorized  instock shipping-taxable purchasable product-type-simple h-entry hentry">
+                                                <div class="product-wrapper">
+                                                    <div class="product-image-wrapper">
+                                                            <span class="primary-image"><img width="300" height="300"
+                                                                    src="{{ data[4]['url300'] }}"
+                                                                    class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                    alt=""
+                                                                    srcset="{{ data[4]['url300'] }} 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" />
+                                                            </span>
+                                                        
+                                                    </div>
+                                                    <div class="product-description-wrapper">
+                                                        <h3 class="woocommerce-loop-product__title"><a
+                                                                href="#">{{ data[4]['hall_name'] }}</a></h3>
+                                                                <h5 class="woocommerce-loop-product__title"><a
+                                                                    href="#">{{ data[4]['location'] }}</a></h5>
+                                                        <div class="entry-product-meta">
+                                                            <p class="price"><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span>{{ data[4]['price'] }}</span>
+                                                            </p>
+                                                            <div class="product-short-description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <div class="product-buttons-inner">
+                                                            <div class="woocommerce_loop_add_to_cart_button hint--top hint--rounded hint--bounce"
+                                                                aria-label="Add to cart"><p  onclick="loca4()"><a href="{{ url_for('login') }}"
+                                                                    data-quantity="1"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    > Add to cart</a></p>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div
+                                                class="col-sm-6 col-md-3 post-431 product type-product status-publish has-post-thumbnail product_cat-uncategorized  instock shipping-taxable purchasable product-type-simple h-entry hentry">
+                                                <div class="product-wrapper">
+                                                    <div class="product-image-wrapper">
+                                                            <span class="primary-image"><img width="300" height="300"
+                                                                    src="{{ data[5]['url300'] }}"
+                                                                    class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                    alt=""
+                                                                    srcset="{{ data[5]['url300'] }} 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" />
+                                                            </span>
+                                                        
+                                                    </div>
+                                                    <div class="product-description-wrapper">
+                                                        <h3 class="woocommerce-loop-product__title"><a
+                                                                href="#">{{ data[5]['hall_name'] }}</a></h3>
+                                                                <h5 class="woocommerce-loop-product__title"><a
+                                                                    href="#">{{ data[5]['location'] }}</a></h5>
+                                                        <div class="entry-product-meta">
+                                                            <p class="price"><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span>{{ data[5]['price'] }}</span>
+                                                            </p>
+                                                            <div class="product-short-description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <div class="product-buttons-inner">
+                                                            <div class="woocommerce_loop_add_to_cart_button hint--top hint--rounded hint--bounce"
+                                                                aria-label="Add to cart"><p  onclick="loca5()"><a href="{{ url_for('login') }}"
+                                                                    data-quantity="1"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    > Add to cart</a></p>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                         <!--   <div
+                                                class="col-sm-6 col-md-3 post-431 product type-product status-publish has-post-thumbnail product_cat-uncategorized  instock shipping-taxable purchasable product-type-simple h-entry hentry">
+                                                <div class="product-wrapper">
+                                                    <div class="product-image-wrapper">
+                                                        <a
+                                                            href="http://demo.amytheme.com/movie/demo/book-ticket/product/gv-vivocity/">
+                                                            <span class="primary-image"><img width="300" height="300"
+                                                                    src="http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-300x300.jpg"
+                                                                    class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                    alt=""
+                                                                    srcset="http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-300x300.jpg 300w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-100x100.jpg 100w, http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/2017/08/tWqifoYuwLETmmasnGHO7xBjEtt-150x150.jpg 150w"
+                                                                    sizes="(max-width: 300px) 100vw, 300px" /></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-description-wrapper">
+                                                        <h3 class="woocommerce-loop-product__title"><a
+                                                                href="http://demo.amytheme.com/movie/demo/book-ticket/product/gv-vivocity/">GV
+                                                                Vivocity</a></h3>
+                                                        <div class="entry-product-meta">
+                                                            <p class="price"><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span>10.00</span>
+                                                            </p>
+                                                            <div class="product-short-description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <div class="product-buttons-inner">
+                                                            <div class="woocommerce_loop_add_to_cart_button hint--top hint--rounded hint--bounce"
+                                                                aria-label="Add to cart"><a href="http://demo.amytheme.com/movie/demo/book-ticket/checkout/"
+                                                                    data-quantity="1"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    >Add to cart</a>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>-->
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </section>
+
+
+        </div>
+    </div>
+
+    <footer id="amy-colophon" class="amy-site-footer">
+        <div class="container">
+            <div class="amy-footer-widgets">
+                <div class="row">
+                    <div class="col-md-3 col-xs-12">
+                        <div class="amy-widget amy-widget-module">
+                            
+                            <div class="clear"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="amy-widget widget_nav_menu">
+                            <div class="amy-widget-title">
+                                <h4>Custom Services</h4>
+                            </div>
+                            <div class="amy-widget-content">
+                                <ul id="menu-footer-menu" class="menu">
+                                    <li id="menu-item-239"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-75 current_page_item menu-item-239">
+                                        <a href="/dashboard"
+                                            aria-current="page">Home</a>
+                                    </li>
+                                    
+                                    <li id="menu-item-238"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238">
+                                        <a href="/dashboard#BookTicket">Now
+                                            Playing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-12">
+                        <div class="amy-widget amy-widget-module">
+                            <div class="amy-widget amy-widget-module contact ">
+                                <h4 class="amy-title amy-widget-title">Contact Us</h4>
+                                <div class="address"><i class="fa fa-location-arrow" aria-hidden="true"></i>JK
+                                    Lakshmipat University, Mahapura,Jaipur Rajasthan</div>
+                                <div class="email"><i class="fa fa-envelope-o"
+                                        aria-hidden="true"></i>Moviesvoom@gmail.com</div>
+                                <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i>99282 50803</div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="amy-widget widget_mc4wp_form_widget">
+                            <script>(function () {
+                                    window.mc4wp = window.mc4wp || {
+                                        listeners: [],
+                                        forms: {
+                                            on: function (evt, cb) {
+                                                window.mc4wp.listeners.push(
+                                                    {
+                                                        event: evt,
+                                                        callback: cb
+                                                    }
+                                                );
+                                            }
+                                        }
+                                    }
+                                })();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+</div>
+
+<link rel='stylesheet' id='prettyphoto-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/prettyphoto/css/prettyPhoto.min.css?ver=6.1'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='vc_font_awesome_5_shims-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/v4-shims.min.css?ver=6.1'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='vc_font_awesome_5-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/all.min.css?ver=6.1'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css?ver=6.1'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='vc_animate-css-css'
+    href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=6.1'
+    type='text/css' media='all' />
+
+
+</div>
+</body>
+
+</html>
