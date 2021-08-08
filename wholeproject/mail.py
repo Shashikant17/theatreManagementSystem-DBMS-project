@@ -9,11 +9,11 @@ from email.mime.text import MIMEText
 # show_time = "03:15:00"
 # price = 110
 
-# receiver_address = "agarwaludit638@gmail.com"
+# receiver_address = "*****@gmail.com"
 # '''
 
 def mail(username,movie_name,hall_name,theatre_location,show_time,price,receiver_address):
-    sender_address = "moviesvoom@gmail.com"
+    sender_address = "****@gmail.com"
     sender_app_pass = "******"
     
     body ="""Dear {},
