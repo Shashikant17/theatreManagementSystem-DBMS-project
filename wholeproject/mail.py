@@ -14,7 +14,7 @@ from email.mime.text import MIMEText
 
 def mail(username,movie_name,hall_name,theatre_location,show_time,price,receiver_address):
     sender_address = "moviesvoom@gmail.com"
-    sender_app_pass = "Moviesvoom&com"
+    sender_app_pass = "******"
     
     body ="""Dear {},
                 Thank You for booking Movie 🎫Ticket from MoviesVoom.com
