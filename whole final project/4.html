@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--[if IE]><![endif]-->
+
+<head>
+	
+	
+
+
+
+	<title>Checkout &#8211; Moviesvoom</title>
+	
+	
+	<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 .07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+	<link rel="stylesheet" href="{{ url_for('static', filename='woocomerse.css') }}">
+	<link rel='stylesheet' id='wp-block-library-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-includes/css/dist/block-library/style.min.css?ver=5.3.7'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='wc-block-style-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.5.11'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='contact-form-7-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.6'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='rs-plugin-settings-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.3.0.2'
+		type='text/css' media='all' />
+	<style id='rs-plugin-settings-inline-css' type='text/css'>
+		#rs-demo-id {}
+	</style>
+	<link rel='stylesheet' id='select2-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/plugins/woocommerce/assets/css/select2.css?ver=3.9.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='amy-woocommerce-css'
+		href='//demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/woocommerce.css?ver=3.9.1'
+		type='text/css' media='all' />
+	<style id='woocommerce-inline-inline-css' type='text/css'>
+		.woocommerce form .form-row .required {
+			visibility: visible;
+		}
+	</style>
+	<script>
+		function off(){
+			alert("Your Ticket is Conifrmed Please collect from Ticket counter. We Mailed you Ticket details !!!");
+			var xhr = new XMLHttpRequest();
+			var url = "http://localhost:5000/offlinepay";
+			xhr.open('GET', url, false);
+			
+			xhr.send();
+			var retrievedtext = xhr.responseText;
+			
+			
+		}
+		
+	</script>
+	<link rel='stylesheet' id='google-font-roboto-condensed-css'
+		href='https://fonts.googleapis.com/css?family=Roboto+Condensed&#038;ver=1.0.0' type='text/css' media='all' />
+		<link rel='stylesheet' id='google-font-roboto-condensed-css'
+		href='D:\p1\static\woocomerse.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='amy-movie-google-fonts-css'
+		href='//fonts.googleapis.com/css?family=Roboto+Condensed%3A400%2C700&#038;ver=5.3.7#038;subset=latin'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='font-awesome-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/font-awesome.css?ver=4.6.3'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='slick-style-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/slick.css?ver=5.3.7'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='slick-theme-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/slick-theme.css?ver=5.3.7'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='fancybox-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/jquery.fancybox.css?ver=3.5.7'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='tooltipster-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/tooltipster.bundle.css?ver=1.0.0'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='mCustomScrollbar-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/jquery.mCustomScrollbar.css?ver=1.0.0'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='plyr-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/vendor/plyr.css?ver=1.0.0'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='amy-movie-style-css'
+		href='http://demo.amytheme.com/movie/demo/book-ticket/wp-content/themes/amy-movie/css/style.css?ver=1.0.0'
+		type='text/css' media='all' />
+	<style id='amy-movie-style-inline-css' type='text/css'>
+		.page-content .vc_custom_1482289028327 {
+			background-position: top center !important;
+		}
+
+		.product-buy-ticket .product .quantity,
+		.product-buy-ticket .woocommerce-related-products {
+			display: none !important;
+		}
+
+		body {
+			font-family: "Roboto Condensed", Arial, sans-serif;
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 400;
+		}
+
+		#amy-site-nav .menu-item a {
+			font-family: "Roboto Condensed", Arial, sans-serif;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 700;
+		}
+
+		#amy-site-nav .sub-menu .menu-item a {
+			font-family: "Roboto Condensed", Arial, sans-serif;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 700;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6,
+		.amy-tab ul li a {
+			font-family: "Roboto Condensed", Arial, sans-serif;
+			font-style: normal;
+			font-weight: 700;
+		}
+
+		.rate,
+		.entry-date,
+		.pg {
+			font-family: "Roboto Condensed", Arial, sans-serif;
+			font-style: normal;
+			font-weight: 400;
+		}
+
+		.amy-primary-navigation ul.nav-menu>li>a::after {
+			width: 0 !important;
+		}
+
+		#amy-page-header {
+			background-image: url(http://demo.amytheme.com/movie/demo/book-ticket/wp-content/uploads/revslider/movie-cinema-slider/mvcnm2.jpg);
+		}
+	</style>
+	<script>
+		function multiplyBy(){
+        num1 = document.getElementById("noofperson").value;
+        num2="{{ Price }}"
+		mun2=(int)(num2)
+        document.getElementById("setprice").innerHTML = num1 * num2;
+		document.getElementById("setno").innerHTML = num1 ;
+		}
+		
+	</script>
+	<script src="https://kit.fontawesome.com/1962756006.js" crossorigin="anonymous"></script>
+	
+	
+	
+	<noscript>
+		<style>
+			.wpb_animate_when_almost_visible {
+				opacity: 1;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body
+	class="page-template-default page page-id-428 theme-amy-movie woocommerce-checkout woocommerce-page woocommerce-no-js amy-header-default  single-author wpb-js-composer js-comp-ver-6.1 vc_responsive" style="background-color:#CAFAFE;">
+	<div id="page" class="hfeed site">
+
+        <header id="masthead" class="site-header header-default has-search light">
+			<div class="container">
+				<div class="amy-inner">
+					<div class="amy-left">
+						<div id="amy-site-logo">
+							<a href="{{ url_for('dashboard') }}">
+								<img class="amy-logo amy-logo1x"
+									src="https://uditagarwals3.s3.ap-south-1.amazonaws.com/logo.png" height="200"
+									width="200" alt="AmyMovie" /></a>
+						</div>
+					</div>
+					<div class="amy-right">
+						<nav id="amy-site-nav" class="amy-site-navigation amy-primary-navigation">
+							<div class="menu-mainnav-container">
+								<ul id="menu-mainnav" class="nav-menu">
+									<li id="menu-item-74"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-73 current_page_item menu-item-has-children menu-item-74">
+										<a href="{{ url_for('dashboard') }}" aria-current="page"><i class="fas fa-home"></i> Dashboard</a>
+
+									</li>
+									<li id="menu-item-121"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-121">
+										<a href="#"><i class="fas fa-film"></i> Genre</a>
+										<ul class="sub-menu">
+											<li id="menu-item-123"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
+												<a href="/dashboard#Action">Action</a>
+											</li>
+											
+											<li id="menu-item-327"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327">
+												<a href="/dashboard#Drama">Drama</a>
+											</li>
+											
+											<li id="menu-item-325"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-325">
+												<a href="/dashboard#sifi">Si-Fi</a>
+											</li>
+										</ul>
+									</li>
+									<li id="menu-item-128"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-128">
+										<a href="#amy-colophon"><i class="far fa-address-card"></i> About</a>
+									</li>
+
+									<li id="menu-item-433"
+										class="menu-item menu-item-type-post_type menu-item-object-product menu-item-433">
+										<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+									</li>
+
+									<li id="menu-item-433"
+										class="menu-item menu-item-type-post_type menu-item-object-product menu-item-433">
+										<a href="/dashboard#BookTicket"><i class="fas fa-ticket-alt"></i> Book
+											Ticket</a>
+									</li>
+
+								</ul>
+							</div>
+						</nav>
+					</div>
+
+				</div>
+			</div>
+	</div>
+		<div id="amy-site-header-shadow"></div>
+		</header>
+
+		
+		<div id="main">
+			<div id="content" class="site-content">
+
+
+				<section id="amy-page-header" class=" ">
+					<div class="amy-page-title amy-">
+						<div class="amy-inner container">
+							<h1 class="page-title">Checkout</h1>
+							<div class="amy-breadcrumb"><span property="itemListElement" typeof="ListItem"><a
+										property="item" typeof="WebPage" title="Go to AmyMovie."
+										href="{{ url_for('dashboard') }}" class="home"><span
+											property="name">Moviesvoom</span></a>
+									<meta property="position" content="1">
+								</span> &gt; <span class="post post-page current-item">Checkout</span></div>
+						</div>
+					</div>
+
+				</section>
+
+				<section class="main-content page-layout-full">
+					<div class="container">
+						<div class="row">
+
+
+							<div class="col-md-12">
+								<div class="page-content">
+									<div class="woocommerce">
+										<div class="woocommerce-notices-wrapper"></div>
+										
+
+										<form name="checkout" method="post" class="checkout woocommerce-checkout"
+											action="{{ url_for('Billing_details') }}"
+											enctype="multipart/form-data">
+
+
+
+											<div class="col2-set" id="customer_details">
+												<div class="col-1">
+													<div class="woocommerce-billing-fields">
+
+														<h3>Billing details</h3>
+
+
+
+														<div class="woocommerce-billing-fields__field-wrapper">
+															<p class="form-row form-row-first validate-required"
+																id="billing_first_name_field" data-priority="10"><label
+																	for="billing_first_name" class="">First
+																	name&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input type="text"
+																		class="input-text " name="billing_first_name"
+																		id="billing_first_name" placeholder="First Name" value=""
+																		autocomplete="given-name" /></span></p>
+															<p class="form-row form-row-last validate-required"
+																id="billing_last_name_field" data-priority="20"><label
+																	for="billing_last_name" class="">Last
+																	name&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input type="text"
+																		class="input-text " name="billing_last_name"
+																		id="billing_last_name" placeholder="Last Name" value=""
+																		autocomplete="family-name" /></span></p>
+															
+															
+															<p class="form-row form-row-wide address-field validate-required"
+																id="billing_address_1_field" data-priority="50"><label
+																	for="billing_address_1" class="">Primary
+																	Location&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input type="text"
+																		class="input-text " name="billing_address_1"
+																		id="billing_address_1"
+																		placeholder=""
+																		value="{{ data }}" autocomplete="address-line1" /></span>
+															</p>
+																														
+															<p class="form-row form-row-wide validate-required validate-email"
+																id="billing_email_field" data-priority="110"><label
+																	for="billing_email" class="">Email
+																	address&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input
+																		type="email" class="input-text "
+																		name="billing_email" id="billing_email"
+																		placeholder="" value="{{ useremail }}"
+																		autocomplete="email username" /></span></p>
+															<p class="form-row form-row-wide address-field validate-required"
+																id="billing_address_1_field" data-priority="50"><label
+																	for="billing_address_1" class="">Age
+																	&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input type="text"
+																		class="input-text " name="billing_address_1"
+																		id="billing_address_1"
+																		placeholder=""
+																		value="{{ user_age }}" autocomplete="address-line1" /></span>
+															</p>
+
+															<p class="form-row form-row-wide address-field validate-required"
+																id="billing_address_1_field" data-priority="50"><label
+																	for="billing_address_1" class="">Time Slot
+																	&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input type="text"
+																		class="input-text " name="billing_address_1"
+																		id="billing_address_1"
+																		
+																		value="{{ timeslot }}" autocomplete="address-line1" /></span>
+															</p>
+
+															<p class="form-row form-row-wide address-field validate-required"
+																id="billing_address_1_field" data-priority="50"><label
+																	for="billing_address_1" class="">Theatre Name
+																	&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input type="text"
+																		class="input-text " name="billing_address_1"
+																		id="billing_address_1"
+																		
+																		value="{{ Theratrename }}" autocomplete="address-line1" /></span>
+															</p>
+															<p class="form-row form-row-wide address-field validate-required"
+																id="billing_address_1_field" data-priority="50"><label
+																	for="billing_address_1" class="">Movie Name
+																	&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input type="text"
+																		class="input-text " name="billing_address_1"
+																		id="billing_address_1"
+																		
+																		value="{{ Movie }}" autocomplete="address-line1" /></span>
+															</p>
+															<p class="form-row form-row-wide address-field validate-required"
+																id="billing_address_1_field" data-priority="50"><label
+																	for="billing_address_1" class="">No. of person
+																	&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input type="text"
+																		class="input-text " name="noofperson"
+																		id="noofperson"
+																		
+																		value="{{ person }}" /></span>
+															</p>
+														<!--	<p class="form-row form-row-wide address-field validate-required"
+																id="billing_address_1_field" data-priority="50"><label
+																	for="billing_address_1" class="">Contact No.
+																	&nbsp;<abbr class="required"
+																		title="required">*</abbr></label><span
+																	class="woocommerce-input-wrapper"><input type="text"
+																		class="input-text " name="billing_address_1"
+																		id="billing_address_1"
+																		
+																		value="" autocomplete="address-line1" /></span>
+															</p>-->
+														</div>
+
+													</div>
+
+													<div class="woocommerce-shipping-fields">
+													</div>
+													
+
+												</div>
+
+												<div class="col-2">
+													<h3 id="order_review_heading">Your order</h3>
+
+
+													<div id="order_review" class="woocommerce-checkout-review-order">
+														<table
+															class="shop_table woocommerce-checkout-review-order-table">
+															<thead>
+																<tr>
+																	<th class="product-name">Product</th>
+																	<th class="product-total">Subtotal</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr class="cart_item">
+																	<td class="product-name"><b> {{ Theratrename }} &nbsp; </b><strong
+																			class="product-quantity" >&times; {{ person }} &nbsp;</strong>
+																	</td>
+																	<td class="product-total">
+																		<span
+																			class="woocommerce-Price-amount amount" ><span
+																				class="woocommerce-Price-currencySymbol" id="setprice" >&#8377; {{ Price }}</span></span>
+																	</td>
+																</tr>
+															</tbody>
+															<tfoot>
+
+																<tr class="cart-subtotal">
+																	<th>Subtotal</th>
+																	<td><span
+																			class="woocommerce-Price-amount amount"><span
+																				class="woocommerce-Price-currencySymbol">&#8377;</span>{{ Price }}</span>
+																	</td>
+																</tr>
+
+
+
+
+
+
+																<tr class="order-total">
+																	<th>Total</th>
+																	<td><strong><span
+																				class="woocommerce-Price-amount amount"><span
+																					class="woocommerce-Price-currencySymbol">&#8377;</span>{{ Price }}</span></strong>
+																	</td>
+																</tr>
+
+
+															</tfoot>
+														</table>
+														<div> <p id="demo"></p></div>
+														<div id="payment" class="woocommerce-checkout-payment">
+															
+															<div class="form-row place-order">
+																<button type="submit" class="button alt"
+																	 value="Place order"
+																	> <a href="{{ url_for('onlinepay') }}">Online Payment</a></button>
+																	<div> <br> </div>
+																	
+																<button type="submit" class="button alt" value="Place order" onclick="off()"> <a href="{{ url_for('logout') }}" > Offline Payment</a></button>
+																
+																
+																
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+
+
+										</form>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<footer id="amy-colophon" class="amy-site-footer">
+			<div class="container">
+				<div class="amy-footer-widgets">
+					<div class="row">
+						<div class="col-md-3 col-xs-12">
+							<div class="amy-widget amy-widget-module">
+								
+								<div class="clear"></div>
+							</div>
+							
+						</div>
+						<div class="col-md-3 col-xs-12">
+							<div class="amy-widget widget_nav_menu">
+								<div class="amy-widget-title">
+									<h4>Custom Services</h4>
+								</div>
+								<div class="amy-widget-content">
+									<ul id="menu-footer-menu" class="menu">
+										<li id="menu-item-239"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-75 current_page_item menu-item-239">
+											<a href="/dashboard"
+												aria-current="page">Home</a>
+										</li>
+										
+										<li id="menu-item-238"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238">
+											<a href="/dashboard#BookTicket">Now
+												Playing</a>
+										</li>
+									</ul>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+	
+						<div class="col-md-3 col-xs-12">
+							<div class="amy-widget amy-widget-module">
+								<div class="amy-widget amy-widget-module contact ">
+									<h4 class="amy-title amy-widget-title">Contact Us</h4>
+									<div class="address"><i class="fa fa-location-arrow" aria-hidden="true"></i>JK
+										Lakshmipat University, Mahapura,Jaipur Rajasthan</div>
+									<div class="email"><i class="fa fa-envelope-o"
+											aria-hidden="true"></i>Moviesvoom@gmail.com</div>
+									<div class="phone"><i class="fa fa-phone" aria-hidden="true"></i>99282 50803</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="amy-widget widget_mc4wp_form_widget">
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</footer>
+		</div>
+	
+		<link rel="stylesheet" href="{{ url_for('static', filename='woocomerse.css') }}">
+		<link rel='stylesheet' id='prettyphoto-css'
+			href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/prettyphoto/css/prettyPhoto.min.css?ver=6.1'
+			type='text/css' media='all' />
+		<link rel='stylesheet' id='vc_font_awesome_5_shims-css'
+			href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/v4-shims.min.css?ver=6.1'
+			type='text/css' media='all' />
+		<link rel='stylesheet' id='vc_font_awesome_5-css'
+			href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/all.min.css?ver=6.1'
+			type='text/css' media='all' />
+		<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css'
+			href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css?ver=6.1'
+			type='text/css' media='all' />
+		<link rel='stylesheet' id='vc_animate-css-css'
+			href='http://demo.amytheme.com/movie/demo/single-cinema/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=6.1'
+			type='text/css' media='all' />
+		
+	
+	</div>
+	
+</body>
+
+</html>

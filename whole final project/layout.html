@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+		
+	</script>
+	<script src="https://kit.fontawesome.com/1962756006.js" crossorigin="anonymous"></script>
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<div id="amy-site-logo">
+					<a href="{{ url_for('adminhome') }}">
+						<img class="amy-logo amy-logo1x"
+							src="https://uditagarwals3.s3.ap-south-1.amazonaws.com/logo.png" height= "80" width="200"/>
+					</a>
+				</div>
+                <a href="{{ url_for('adminhome') }}"><i class="fas fa-home"></i>Home</a>
+				<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="{{ url_for('insertmovie') }}"><i class="fas fa-ticket-alt"></i> Movie Insert</a>
+				<a href="{{ url_for('Moviedeletion') }}"><i class="fas fa-pen-alt"></i> Movie Updation</a>
+				<a href="{{ url_for('theatreinsert') }}"><i class="fas fa-theater-masks"></i> Theatre Insert</a>
+				<a href="{{ url_for('theatredeletion') }}"><i class="fas fa-window-close"></i> Theatre Close</a>
+				<a href="{{ url_for('adminlogout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>
